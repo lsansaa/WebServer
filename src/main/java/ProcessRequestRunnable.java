@@ -232,7 +232,7 @@ public class ProcessRequestRunnable implements Runnable {
 
     private static void writeChat(OutputStream outputStream, String verb, String file, String payload) throws IOException {
         // archivo con la pagina principal del chat
-        FileInputStream indexFile =  new FileInputStream(new File("C:\\Projects\\02.WebServer.Multithread\\WebServer\\src\\main\\resources\\index.html"));
+        FileInputStream indexFile =  new FileInputStream(new File("src\\main\\resources\\index.html"));
         // obtener cuerpo de la pagina a partir del archivo
         final String indexBody = IOUtils.toString(indexFile, "UTF-8");
         //agregar ultimo mensaje al chat
@@ -246,7 +246,7 @@ public class ProcessRequestRunnable implements Runnable {
     private static String getChatLog()throws IOException{
         String chatBody = "";
         // archivo con historial del chat
-        FileReader historyFile =  new FileReader("C:\\Projects\\02.WebServer.Multithread\\WebServer\\src\\main\\resources\\chatLog.txt");
+        FileReader historyFile =  new FileReader("src\\main\\resources\\chatLog.txt");
         BufferedReader bReader = new BufferedReader(historyFile);
         String line;
         int lineCounter = 0;
@@ -274,7 +274,7 @@ public class ProcessRequestRunnable implements Runnable {
                 String [] msg = StringUtils.split(fileSplited[1],"=");
                 String message = URLDecoder.decode(msg[1], Charset.defaultCharset().name());
                 String user = URLDecoder.decode(StringUtils.split(fileSplited[0],"=")[1], Charset.defaultCharset().name());
-                File historyFile = new File ("C:\\Projects\\02.WebServer.Multithread\\WebServer\\src\\main\\resources\\chatLog.txt");
+                File historyFile = new File ("src\\main\\resources\\chatLog.txt");
                 // archivo con historial del chat
                 FileInputStream historyFileStream =  new FileInputStream(historyFile);
                 final String historyLog = IOUtils.toString(historyFileStream, "UTF-8");
