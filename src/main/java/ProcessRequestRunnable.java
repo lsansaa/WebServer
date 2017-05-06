@@ -268,6 +268,7 @@ public class ProcessRequestRunnable implements Runnable {
 
     }
     private static void AddToChatLog(String file) throws IOException{
+        //si el mensaje no esta vacio y no es nulo
         if(file!=null&&file!=""){
             String [] fileSplited = StringUtils.split(file,"&");
             if(fileSplited.length>1){
