@@ -139,16 +139,17 @@
 <div id="contents">
     <div id="wrapper">
         <div class="bubble-container">
-            <div class="bubble-container"><span class="bubble"><img class="bubble-avatar" src="" /><div class="bubble-text"><p>Hola!</p></div><span class="bubble-quote" /></span></div>
-            <div class="bubble-container"><span class="bubble"><img class="bubble-avatar" src="" /><div class="bubble-text"><p>Como estas?</p></div><span class="bubble-quote" /></span></div>
+            <div class="bubble-container"><span class="bubble"><img class="bubble-avatar" src="" /><div class="bubble-text"><p>Bienvenido!</p></div><span class="bubble-quote" /></span></div>
+            <!--ChatLog-->
         </div>
     </div>
 </div>
 <center>
     <div id="form">
-        <form class="form" method="get">
-            <input id="msgText" style="width:393px" type="text"/>
-            <input type="submit" class="button" value="Send"/>
+        <form action="/chat" class="form" method="post">
+            <input id="user" name="user" style="width:100px" placeholder="Usuario" type="text"/>
+            <input id="msgText" name="msgText" style="width:393px" placeholder="Mensaje" type="text"/>
+            <input type="submit" class="button" value="submit"/>
         </form>
     </div>
 </center>

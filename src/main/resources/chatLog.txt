@@ -1,0 +1,3 @@
+*
+Lucho : Hola
+El Perro : Hola
